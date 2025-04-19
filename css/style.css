@@ -321,3 +321,8 @@ section .line-intro{
     font-size: 20px;
     color: white;
 }
+.clients{
+    background-color: var(--bage-color);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
