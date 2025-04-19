@@ -241,8 +241,83 @@ section .line-intro{
     padding-bottom: 50px;
     padding-top:30px;
 }
-.team .img-person img{
-    margin-top: 50px;
+
+.team .img-person .img-box{
+    position: relative;
     width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.team .img-person .img-box::after{
+    content: "";
+    display: none;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(to top,rgba(78, 64, 57, 0.5),rgba(120, 100, 90, 0.1));
+    position: absolute;
     border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    top: 0;
+}
+.team .img-person .img-box:hover::after{
+    display: block;
+}
+.team .img-person .img-box .imglay{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.team .img-person .img-box .imglay h4{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    z-index: 2;
+}
+.team .img-person .img-box .imglay p{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 200px;
+    transform: translate(-50%);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    z-index: 2;
+}
+.team .img-person .img-box:hover .imglay{
+    opacity: 1;
+}
+.team .img-person img{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    top: 0;
+}
+.team .img-person .img-box .content-lay{
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    background-color: rgba(78, 64, 57, 0.5);
+    top: 0;
+    left: -50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+}
+.team .img-person .img-box:hover .content-lay{
+    left: 0;
+}
+.team .img-person .img-box .content-lay i {
+    font-size: 20px;
+    color: white;
 }
